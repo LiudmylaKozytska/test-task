@@ -4,6 +4,7 @@ export const UserItem = styled.li`
   position: relative;
   width: 380px;
   height: 460px;
+  margin-bottom: 26px;
   background: linear-gradient(
     114.99deg,
     #471ca9 -0.99%,
@@ -38,13 +39,34 @@ export const DecorationLine = styled.div`
     inset 0px -1.71846px 3.43693px #ae7be3, inset 0px 3.43693px 2.5777px #fbf8ff;
 `;
 
-export const UserImage = styled.img`
+export const Avatar = styled.div`
   position: absolute;
-  width: 80px;
-  height: 80px;
   top: 178px;
   left: 50%;
   transform: translateX(-50%);
+`;
+
+export const DecorationCircle = styled.img`
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 80px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+`;
+
+export const UserImage = styled.img`
+  position: absolute;
+  display: block;
+  width: 64px;
+  height: 64px;
+  top: 0px;
+  left: 50%;
+  object-fit: cover;
+  transform: translateX(-50%);
+  border-radius: 50%;
 `;
 
 export const TextContainer = styled.div`
@@ -89,6 +111,8 @@ export const Button = styled.button`
   line-height: 22px;
   text-transform: uppercase;
   color: #373737;
+
+  cursor: pointer;
 `;
 
 export const ButtonActive = styled.button`
@@ -110,4 +134,6 @@ export const ButtonActive = styled.button`
   line-height: 22px;
   text-transform: uppercase;
   color: #373737;
+
+  cursor: pointer;
 `;

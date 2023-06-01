@@ -1,12 +1,21 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
+import React, { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
+import { BsArrowLeft } from "react-icons/bs";
 
 import UserCard from "../components/UserCard/UserCard";
 
+import { UsersList, LoadMoreButton, BackLink, BackText } from "./PagesStyled";
+
 const BASE_URL = "https://6477b01e9233e82dd53c08e4.mockapi.io/users";
+const USERS_PER_PAGE = 3;
 
 const Users = () => {
   const [users, setUsers] = useState([]);
+  const [page, setPage] = useState(1);
+  const [visibleUsers, setVisibleUsers] = useState([]);
+  const location = useLocation();
+  const backPage = useRef(location.state?.from ?? "/");
 
   useEffect(() => {
     const getUsers = async () => {
@@ -20,16 +29,41 @@ const Users = () => {
     getUsers();
   }, []);
 
-  console.log(users);
+  useEffect(() => {
+    setVisibleUsers([]);
+  }, [users]);
+
+  useEffect(() => {
+    const firstIndex = (page - 1) * USERS_PER_PAGE;
+    const nextIndex = firstIndex + USERS_PER_PAGE;
+    setVisibleUsers((prevVisibleUsers) => [
+      ...prevVisibleUsers,
+      ...users.slice(firstIndex, nextIndex),
+    ]);
+  }, [users, page]);
+
+  const loadMore = () => {
+    setPage((prevPage) => prevPage + 1);
+  };
 
   return (
     <>
-      <h1>Users Page</h1>
-      <ul>
-        {users.map(({ id, tweets, followers }) => (
-          <UserCard key={id} tweets={tweets} followers={followers} />
+      <BackLink to={backPage.current}>
+        <BsArrowLeft />
+      </BackLink>
+      <UsersList>
+        {visibleUsers.map(({ id, tweets, followers, avatar }) => (
+          <UserCard
+            key={id}
+            tweets={tweets}
+            followers={followers}
+            avatar={avatar}
+          />
         ))}
-      </ul>
+      </UsersList>
+      {users.length > visibleUsers.length && (
+        <LoadMoreButton onClick={loadMore}>Load More</LoadMoreButton>
+      )}
     </>
   );
 };
