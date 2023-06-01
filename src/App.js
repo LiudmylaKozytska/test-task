@@ -8,14 +8,12 @@ const Users = lazy(() => import("./pages/Users"));
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/users" element={<Users />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/users" element={<Users />} />
+      </Route>
+    </Routes>
   );
 }
 
