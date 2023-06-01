@@ -16,19 +16,19 @@ import logo from "../../images/logo.png";
 import background_image from "../../images/background_image.png";
 import user from "../../images/user.png";
 
-const UserCard = () => {
+const UserCard = ({ id, tweets, followers }) => {
   return (
-    <UserItem>
+    <UserItem key={id}>
       <LogoImage src={logo} alt="logo" />
       <BackgroundImage src={background_image} alt="background image" />
       <DecorationLine />
       <UserImage src={user} alt="avatar" />
       <TextContainer>
-        <Text>tweets</Text>
-        <Text>followers</Text>
+        <Text>{tweets} tweets</Text>
+        <Text>{followers} followers</Text>
       </TextContainer>
-      <Button>follow</Button>
       <ButtonActive>following</ButtonActive>
+      <Button>follow</Button>
     </UserItem>
   );
 };
