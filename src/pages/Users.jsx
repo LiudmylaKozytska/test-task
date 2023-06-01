@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
 
-import UserCard from "../components/UserCard";
+import UserCard from "../components/UserCard/UserCard";
 
-const BASE_URL = "https://6477b01e9233e82dd53c08e4.mockapi.io/tweetsApp";
+const BASE_URL = "https://6477b01e9233e82dd53c08e4.mockapi.io/users";
 
 const Users = () => {
   async function getUsers() {

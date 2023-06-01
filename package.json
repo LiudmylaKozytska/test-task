@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://LiudmylaKozytska.github.io/test-task/",
   "dependencies": {
+    "@emotion/styled": "^11.11.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -20,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-     "lint:js": "eslint src/**/*.{js,jsx}"
+    "lint:js": "eslint src/**/*.{js,jsx}"
   },
   "eslintConfig": {
     "extends": [
