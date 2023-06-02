@@ -5,7 +5,12 @@ import { BsArrowLeft } from "react-icons/bs";
 
 import UserCard from "../components/UserCard/UserCard";
 
-import { UsersList, LoadMoreButton, BackLink, BackText } from "./PagesStyled";
+import {
+  UsersList,
+  LoadMoreButton,
+  BackLink,
+  BackLinkText,
+} from "./PagesStyled";
 
 const BASE_URL = "https://6477b01e9233e82dd53c08e4.mockapi.io/tweetsApp/users";
 const USERS_PER_PAGE = 3;
@@ -49,7 +54,8 @@ const Users = () => {
   return (
     <>
       <BackLink to={backPage.current}>
-        <BsArrowLeft />
+        <BsArrowLeft size={30} />
+        <BackLinkText>Go back</BackLinkText>
       </BackLink>
       <UsersList>
         {visibleUsers.map(({ id, tweets, followers, avatar }) => (

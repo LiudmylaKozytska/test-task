@@ -38,10 +38,33 @@ export const LoadMoreButton = styled.button`
 `;
 
 export const BackLink = styled(Link)`
-  display: block;
+  display: flex;
+  gap: 20px;
   cursor: pointer;
-  ${
-    "" /* width: 44px;
-  height: 44px; */
-  }
+  margin-bottom: 24px;
+  align-items: baseline;
+`;
+
+export const BackLinkText = styled.p`
+  font-size: 36px;
+  font-weight: 600;
+`;
+
+export const HomeSection = styled.section`
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+`;
+
+export const Title = styled.h1`
+  font-size: 48px;
+  font-weight: 600;
+`;
+
+export const BackgroundImage = styled.img`
+  width: 550px;
+  height: 360px;
 `;
