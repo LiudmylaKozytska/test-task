@@ -60,9 +60,13 @@ const UserCard = ({ id, tweets, followers, avatar }) => {
         <Text>{newFollowers} followers</Text>
       </TextContainer>
       {isFollowing ? (
-        <ButtonActive onClick={handleFollowClick}>Following</ButtonActive>
+        <ButtonActive type="button" onClick={handleFollowClick}>
+          Following
+        </ButtonActive>
       ) : (
-        <Button onClick={handleFollowClick}>Follow</Button>
+        <Button type="button" onClick={handleFollowClick}>
+          Follow
+        </Button>
       )}
     </UserItem>
   );

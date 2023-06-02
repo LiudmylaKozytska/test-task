@@ -12,7 +12,7 @@ import {
   BackLinkText,
 } from "./PagesStyled";
 
-const BASE_URL = "https://6477b01e9233e82dd53c08e4.mockapi.io/tweetsApp/users";
+const BASE_URL = "https://6477b01e9233e82dd53c08e4.mockapi.io/users";
 const USERS_PER_PAGE = 3;
 
 const Users = () => {
