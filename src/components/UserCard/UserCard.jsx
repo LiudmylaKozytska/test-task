@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import {
   UserItem,
@@ -20,8 +20,17 @@ import user from "../../images/user.png";
 import ellipse from "../../images/ellipse.png";
 
 const UserCard = ({ id, tweets, followers, avatar }) => {
-  const [isFollowing, setIsFollowing] = useState(false);
-  const [followerCount, setFollowerCount] = useState(followers);
+  const [isFollowing, setIsFollowing] = useState(
+    JSON.parse(localStorage.getItem(`isFollowing-${id}`)) ?? false
+  );
+  const [followerCount, setFollowerCount] = useState(
+    JSON.parse(localStorage.getItem(`followers-${id}`)) ?? followers
+  );
+
+  useEffect(() => {
+    localStorage.setItem(`isFollowing-${id}`, JSON.stringify(isFollowing));
+    localStorage.setItem(`followers-${id}`, JSON.stringify(followerCount));
+  }, [isFollowing, followerCount]);
 
   const handleFollowClick = () => {
     if (isFollowing) {

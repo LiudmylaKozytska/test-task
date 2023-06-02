@@ -7,7 +7,7 @@ import UserCard from "../components/UserCard/UserCard";
 
 import { UsersList, LoadMoreButton, BackLink, BackText } from "./PagesStyled";
 
-const BASE_URL = "https://6477b01e9233e82dd53c08e4.mockapi.io/users";
+const BASE_URL = "https://6477b01e9233e82dd53c08e4.mockapi.io/tweetsApp/users";
 const USERS_PER_PAGE = 3;
 
 const Users = () => {
@@ -55,6 +55,7 @@ const Users = () => {
         {visibleUsers.map(({ id, tweets, followers, avatar }) => (
           <UserCard
             key={id}
+            id={id}
             tweets={tweets}
             followers={followers}
             avatar={avatar}
