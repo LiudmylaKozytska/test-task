@@ -20,10 +20,23 @@ import user from "../../images/user.png";
 import ellipse from "../../images/ellipse.png";
 
 const UserCard = ({ id, tweets, followers, avatar }) => {
-  const [state, setState] = useState(null);
-  const newFollowers = followers.toLocaleString("en-US", {
+  const [isFollowing, setIsFollowing] = useState(false);
+  const [followerCount, setFollowerCount] = useState(followers);
+
+  const handleFollowClick = () => {
+    if (isFollowing) {
+      setIsFollowing(false);
+      setFollowerCount((prevCount) => prevCount - 1);
+    } else {
+      setIsFollowing(true);
+      setFollowerCount((prevCount) => prevCount + 1);
+    }
+  };
+
+  let newFollowers = followerCount.toLocaleString("en-US", {
     minimumFractionDigits: 0,
   });
+
   return (
     <UserItem key={id}>
       <LogoImage src={logo} alt="logo" />
@@ -37,8 +50,11 @@ const UserCard = ({ id, tweets, followers, avatar }) => {
         <Text>{tweets} tweets</Text>
         <Text>{newFollowers} followers</Text>
       </TextContainer>
-      <ButtonActive>following</ButtonActive>
-      <Button>follow</Button>
+      {isFollowing ? (
+        <ButtonActive onClick={handleFollowClick}>Following</ButtonActive>
+      ) : (
+        <Button onClick={handleFollowClick}>Follow</Button>
+      )}
     </UserItem>
   );
 };
