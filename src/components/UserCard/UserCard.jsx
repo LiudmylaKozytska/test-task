@@ -30,7 +30,7 @@ const UserCard = ({ id, tweets, followers, avatar }) => {
   useEffect(() => {
     localStorage.setItem(`isFollowing-${id}`, JSON.stringify(isFollowing));
     localStorage.setItem(`followers-${id}`, JSON.stringify(followerCount));
-  }, [isFollowing, followerCount]);
+  }, [isFollowing, followerCount, id]);
 
   const handleFollowClick = () => {
     if (isFollowing) {
