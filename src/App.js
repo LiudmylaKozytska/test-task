@@ -1,17 +1,18 @@
-import React from "react";
-import { lazy } from "react";
-import { Route, Routes } from "react-router-dom";
-import Layout from "./components/Layout/Layout";
+import React from 'react';
+import { lazy } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-const Home = lazy(() => import("./pages/Home"));
-const Users = lazy(() => import("./pages/Users"));
+const Layout = lazy(() => import('./components/Layout/Layout'));
+const Home = lazy(() => import('./pages/Home'));
+const Users = lazy(() => import('./pages/Users'));
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/users" element={<Users />} />
+        <Route path="tweets" element={<Users />} />
+        <Route path="*" element={<Home />} />
       </Route>
     </Routes>
   );
