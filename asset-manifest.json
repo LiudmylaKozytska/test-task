@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/test-task/static/css/main.9eee470a.css",
-    "main.js": "/test-task/static/js/main.d592cce6.js",
-    "static/js/256.37fd3be1.chunk.js": "/test-task/static/js/256.37fd3be1.chunk.js",
+    "main.js": "/test-task/static/js/main.42df2657.js",
+    "static/js/256.a775eda5.chunk.js": "/test-task/static/js/256.a775eda5.chunk.js",
     "static/js/415.0769328c.chunk.js": "/test-task/static/js/415.0769328c.chunk.js",
-    "static/js/681.b550b570.chunk.js": "/test-task/static/js/681.b550b570.chunk.js",
+    "static/js/681.1238208c.chunk.js": "/test-task/static/js/681.1238208c.chunk.js",
     "static/js/816.71eb6ebb.chunk.js": "/test-task/static/js/816.71eb6ebb.chunk.js",
     "static/js/523.96b395f5.chunk.js": "/test-task/static/js/523.96b395f5.chunk.js",
     "static/js/102.4210a6a0.chunk.js": "/test-task/static/js/102.4210a6a0.chunk.js",
@@ -12,16 +12,16 @@
     "static/media/user.png": "/test-task/static/media/user.124bb633313c2d5adbe0.png",
     "index.html": "/test-task/index.html",
     "main.9eee470a.css.map": "/test-task/static/css/main.9eee470a.css.map",
-    "main.d592cce6.js.map": "/test-task/static/js/main.d592cce6.js.map",
-    "256.37fd3be1.chunk.js.map": "/test-task/static/js/256.37fd3be1.chunk.js.map",
+    "main.42df2657.js.map": "/test-task/static/js/main.42df2657.js.map",
+    "256.a775eda5.chunk.js.map": "/test-task/static/js/256.a775eda5.chunk.js.map",
     "415.0769328c.chunk.js.map": "/test-task/static/js/415.0769328c.chunk.js.map",
-    "681.b550b570.chunk.js.map": "/test-task/static/js/681.b550b570.chunk.js.map",
+    "681.1238208c.chunk.js.map": "/test-task/static/js/681.1238208c.chunk.js.map",
     "816.71eb6ebb.chunk.js.map": "/test-task/static/js/816.71eb6ebb.chunk.js.map",
     "523.96b395f5.chunk.js.map": "/test-task/static/js/523.96b395f5.chunk.js.map",
     "102.4210a6a0.chunk.js.map": "/test-task/static/js/102.4210a6a0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9eee470a.css",
-    "static/js/main.d592cce6.js"
+    "static/js/main.42df2657.js"
   ]
 }
