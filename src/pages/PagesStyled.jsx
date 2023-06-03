@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
+import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 export const UsersList = styled.ul`
   display: grid;
@@ -18,7 +18,7 @@ export const LoadMoreButton = styled.button`
   border-radius: 10.3108px;
   border: none;
 
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -31,6 +31,8 @@ export const LoadMoreButton = styled.button`
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     background: #5cd3a8;

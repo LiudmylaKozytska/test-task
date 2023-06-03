@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const UserItem = styled.li`
   position: relative;
@@ -75,10 +75,11 @@ export const TextContainer = styled.div`
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  width: 100%;
 `;
 
 export const Text = styled.p`
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -104,7 +105,7 @@ export const Button = styled.button`
   border-radius: 10.3108px;
   border: none;
 
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -112,7 +113,12 @@ export const Button = styled.button`
   text-transform: uppercase;
   color: #373737;
 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   cursor: pointer;
+  &:hover {
+    background-color: #ffd8ff;
+  }
 `;
 
 export const ButtonActive = styled.button`
@@ -127,7 +133,7 @@ export const ButtonActive = styled.button`
   border-radius: 10.3108px;
   border: none;
 
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -136,4 +142,10 @@ export const ButtonActive = styled.button`
   color: #373737;
 
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: #5cc2d3;
+  }
 `;
