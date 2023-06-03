@@ -1,26 +1,26 @@
-import axios from "axios";
-import React, { useState, useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
-import { BsArrowLeft } from "react-icons/bs";
+import axios from 'axios';
+import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
+import { BsArrowLeft } from 'react-icons/bs';
 
-import UserCard from "../components/UserCard/UserCard";
+import UserCard from '../components/UserCard/UserCard';
 
 import {
   UsersList,
   LoadMoreButton,
   BackLink,
   BackLinkText,
-} from "./PagesStyled";
+} from './PagesStyled';
 
-const BASE_URL = "https://6477b01e9233e82dd53c08e4.mockapi.io/users";
+const BASE_URL = 'https://6477b01e9233e82dd53c08e4.mockapi.io/tweetsApp/users';
 const USERS_PER_PAGE = 3;
 
-const Users = () => {
+const Tweets = () => {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
   const [visibleUsers, setVisibleUsers] = useState([]);
   const location = useLocation();
-  const backPage = useRef(location.state?.from ?? "/");
+  const backPage = useRef(location.state?.from ?? '/');
 
   useEffect(() => {
     const getUsers = async () => {
@@ -41,14 +41,14 @@ const Users = () => {
   useEffect(() => {
     const firstIndex = (page - 1) * USERS_PER_PAGE;
     const nextIndex = firstIndex + USERS_PER_PAGE;
-    setVisibleUsers((prevVisibleUsers) => [
+    setVisibleUsers(prevVisibleUsers => [
       ...prevVisibleUsers,
       ...users.slice(firstIndex, nextIndex),
     ]);
   }, [users, page]);
 
   const loadMore = () => {
-    setPage((prevPage) => prevPage + 1);
+    setPage(prevPage => prevPage + 1);
   };
 
   return (
@@ -75,4 +75,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default Tweets;

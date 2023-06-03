@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../goit-react-hw-08-phonebook/node_modules"
+		}
+	],
+	"settings": {}
+}

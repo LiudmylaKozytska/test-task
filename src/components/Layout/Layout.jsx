@@ -1,8 +1,8 @@
-import React from "react";
-import { Suspense } from "react";
-import { Outlet } from "react-router-dom";
-import { Oval } from "react-loader-spinner";
-import { NavItem, NavList, NavigationLink, Header, Main } from "./LayoutStyles";
+import React from 'react';
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
+import { Oval } from 'react-loader-spinner';
+import { NavItem, NavList, NavigationLink, Header, Main } from './LayoutStyles';
 
 const Layout = () => {
   return (
@@ -13,7 +13,7 @@ const Layout = () => {
             <NavigationLink to="/">Home</NavigationLink>
           </NavItem>
           <NavItem>
-            <NavigationLink to="/users">Users</NavigationLink>
+            <NavigationLink to="/tweets">Tweets</NavigationLink>
           </NavItem>
         </NavList>
       </Header>
